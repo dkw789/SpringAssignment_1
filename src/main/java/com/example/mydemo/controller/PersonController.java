@@ -28,6 +28,11 @@ public class PersonController {
 //        return "hello";
 //    }
 
+    @RequestMapping(value = "persons", method = RequestMethod.GET)
+    public List<Person> mylist() {
+        return PersonStub.list();
+    }
+
     @RequestMapping(value="person", method = RequestMethod.GET)
     public List<Person> list() {
         return personRepository.findAll();
@@ -44,7 +49,7 @@ public class PersonController {
 
     }
 
-    
+
 //    @RequestMapping(value = "person/{id}", method = RequestMethod.PUT)
 //     public Person update(@PathVariable Long id, @RequestBody Person person){
 //        Person existingperson = personRepository.findById(id);
