@@ -29,20 +29,20 @@ public class Person {
 
     private String email;
 
-    private String role;
+    private String job;
 
     public Person() {
 
     }
 
-    public Person(long id, String firstName, String lastName, String address, String telephone, String email, String role) {
+    public Person(long id, String firstName, String lastName, String address, String telephone, String email, String job) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
         this.address = address;
         this.telephone = telephone;
         this.email = email;
-        this.role = role;
+        this.job = job;
     }
 
 

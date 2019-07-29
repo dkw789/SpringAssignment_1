@@ -10,7 +10,4 @@ public interface PersonRepository extends JpaRepository<Person, Long> {
 
     Page<Person> findAll(Pageable pageable);
 
-
-    @Override
-    void deleteById(Long aLong);
 }
