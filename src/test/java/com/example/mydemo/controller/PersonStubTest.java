@@ -6,11 +6,10 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 
 public class PersonStubTest {
-
-    private PersonStub personstub;
 
 
     @Test
@@ -32,6 +31,12 @@ public class PersonStubTest {
 
     @Test
     public void create() {
+        Person p4 = new Person(4L, "'Lissie'", "'Bakhrushkin'", "'97 Springview Drive", "'698-216-2445'", "lbakhrushkin0@hostgator.com", "Developer I");
+
+        Person n = PersonStub.create(p4);
+//        Person n2 = PersonStub.get(4L);
+        assertEquals(n, p4);
+
 
     }
 
