@@ -1,6 +1,5 @@
-package com.example.mydemo;
+package com.example.mydemo.controller;
 
-import com.example.mydemo.controller.PersonController;
 import com.example.mydemo.model.Person;
 import com.example.mydemo.repository.PersonRepository;
 import org.junit.Before;
