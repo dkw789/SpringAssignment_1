@@ -7,6 +7,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.web.client.RestTemplate;
 
@@ -17,11 +18,28 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
+//@SpringApplicationConfiguration(MydemoApplication.class)
+//@SpringApplicationConfiguration(classes = MydemoApplication.class)
+
+@ContextConfiguration(classes = MydemoApplication.class)
+//@IntegrationTest
+//@SpringBootConfiguration
+@SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+//@SpyBean
+
 public class PersonControllerWebIntegrationTest {
+
+//    @Autowired
+//    private RestTemplate restTemplate;
+
+//    @MockBean
+
     @Test
     public void testListAll() throws IOException {
+
         RestTemplate restTemplate = new RestTemplate();
+//        TestRestTemplate restTemplate = new TestRestTemplate();
+
         ResponseEntity<String> response = restTemplate.getForEntity("http://localhost:8080/person", String.class);
 
         assertThat(response.getStatusCode(), equalTo(HttpStatus.OK));

@@ -8,7 +8,7 @@ public class DefaultController {
 	
 	@RequestMapping("/home")
 	public String home() {
-		return "reporting for duty!";
+		return "Reporting for duty!";
 	}
 
 }

@@ -2,15 +2,13 @@ package com.example.mydemo;
 
 import com.example.mydemo.controller.DefaultController;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.Assert.assertEquals;
 
-
-@RunWith(SpringRunner.class)
-@SpringBootTest
+//@AutoConfigureJdbc
+//@RunWith(SpringRunner.class)
+//@SpringBootTest
+//@ImportAutoConfiguration
 public class MydemoApplicationTests {
 
 	@Test

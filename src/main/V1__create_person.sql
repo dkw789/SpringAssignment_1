@@ -1,13 +1,13 @@
-create table person
-(
-    id        INT,
-    firstname VARCHAR(50),
-    lastname  VARCHAR(50),
-    address   VARCHAR(50),
-    telephone VARCHAR(50),
-    email     VARCHAR(50),
-    job       VARCHAR(50)
-);
+--create table Person
+--(
+--    id        INT,
+--    firstname VARCHAR(50),
+--    lastname  VARCHAR(50),
+--    address   VARCHAR(50),
+--    telephone VARCHAR(50),
+--    email     VARCHAR(50),
+--    job       VARCHAR(50)
+--);
 insert into person (id, firstname, lastname, address, telephone, email, job)
 values (1, 'Lissie', 'Bakhrushkin', '97 Springview Drive', '698-216-2445', 'lbakhrushkin0@hostgator.com',
         'Developer I');
