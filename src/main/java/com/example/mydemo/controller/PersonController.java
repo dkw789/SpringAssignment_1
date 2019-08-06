@@ -4,6 +4,8 @@ import com.example.mydemo.exception.PersonNotFoundException;
 import com.example.mydemo.model.Person;
 import com.example.mydemo.repository.PersonRepository;
 import com.example.mydemo.service.PersonService;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,6 +19,7 @@ import java.util.List;
 @RequestMapping("/")
 public class PersonController {
 
+    private static final Logger log = LogManager.getLogger(PersonController.class);
 
     private final PersonRepository personRepository;
     private final PersonService personService;
@@ -94,4 +97,11 @@ public class PersonController {
         personRepository.delete(person);
 //        personRepository.deleteById(id);
     }
+
+    @RequestMapping("/person/indexPerson/{id}")
+    public String indexProduct(@PathVariable String id) {
+        personService.sendPersonMessage(id);
+        return "redirect:/person/" + id;
+    }
+
 }

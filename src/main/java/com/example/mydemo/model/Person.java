@@ -31,6 +31,10 @@ public class Person {
 
     private String job;
 
+    private boolean messageReceived;
+
+    private Integer messageCount = 0; //init to zer
+
     public Person() {
 
     }
